@@ -1,7 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 export PATH="/usr/local/sbin:$PATH"
 PATH="$HOME/.composer/vendor/bin:$PATH"
-
+PATH="$HOME/Library/Python/3.7/bin:$PATH"
+PATH="$PATH:_add-ons/stag/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/mike/.oh-my-zsh"
@@ -72,7 +73,15 @@ export ZSH="/Users/mike/.oh-my-zsh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git github brew osx zsh-syntax-highlighting zsh-autosuggestions)
 
+sshcopy()
+{
+	cat ~/.ssh/id_rsa.pub | pbcopy
+	echo 'ssh public key copied.'
+}
+
 source $ZSH/oh-my-zsh.sh
+
+
 
 # User configuration
 
@@ -99,7 +108,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
-
 autoload -U promptinit; promptinit
 prompt pure
 
