@@ -1,8 +1,7 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 export PATH="/usr/local/sbin:$PATH"
-PATH="$HOME/.composer/vendor/bin:$PATH"
-PATH="$HOME/Library/Python/3.7/bin:$PATH"
-PATH="$PATH:_add-ons/stag/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/mike/.oh-my-zsh"
@@ -111,3 +110,7 @@ alias ohmyzsh="code ~/.oh-my-zsh"
 autoload -U promptinit; promptinit
 prompt pure
 
+export PATH=${PATH}:~/.composer/vendor/bin
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
